@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://verbative.de/docs/memory
+    about: Install help and how the memory works.
+  - name: Account, billing & trials
+    url: mailto:info@verbative.de
+    about: Anything about your Verbative account, licensing, or a trial.
+  - name: What is Verbative Memory?
+    url: https://verbative.de/memory
+    about: Overview and current benchmarks.

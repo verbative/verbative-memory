@@ -1,0 +1,18 @@
+Verbative Memory — Documentation & Issues (public)
+
+Copyright (c) 2026 Florian Cramer (Cramer Digital). All rights reserved.
+
+This repository is the public home for Verbative Memory's documentation, install help, and
+issue tracker. It contains NO source code — the Verbative Memory engine is proprietary and is
+distributed only as a sealed, compiled package.
+
+The `verbative-memory` package (PyPI and npm) is licensed, not sold, under the Verbative
+End-User License Agreement and the Verbative Terms of Service (https://verbative.de/legal/terms).
+Installing or using the package constitutes acceptance of those terms.
+
+The documentation and text in this repository may not be republished or mirrored without
+written permission, except for brief quotation with attribution.
+
+"Verbative" is a product of Florian Cramer (Cramer Digital). Not affiliated with, or endorsed by, Anthropic.
+
+Contact: info@verbative.de
