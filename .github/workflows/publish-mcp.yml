@@ -1,0 +1,32 @@
+name: Publish to MCP Registry
+
+# Publishes server.json to the official MCP registry using GitHub Actions OIDC.
+# OIDC stamps the token with repository_owner = verbative, so the registry grants
+# the io.github.verbative/* namespace directly — no interactive login, no org
+# membership lookup. Runs on manual dispatch or whenever server.json changes.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["server.json"]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write # required for OIDC
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install mcp-publisher
+        run: |
+          curl -sSL "https://github.com/modelcontextprotocol/registry/releases/download/v1.8.0/mcp-publisher_linux_amd64.tar.gz" \
+            | tar xz mcp-publisher
+          ./mcp-publisher --version
+
+      - name: Login via GitHub OIDC
+        run: ./mcp-publisher login github-oidc
+
+      - name: Publish
+        run: ./mcp-publisher publish
