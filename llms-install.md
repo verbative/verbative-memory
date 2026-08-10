@@ -53,7 +53,7 @@ Then point the client at the installed console script:
 - The memory engine needs a **Verbative account** (free 14-day trial) — sign in at
   https://verbative.de. Listing, pinning, and exporting existing memories keep
   working even if the trial lapses.
-- Platform: macOS (Apple Silicon) today.
+- Platform: macOS (Apple Silicon) or Windows 10/11 (x64).
 
 ## Verify it works
 

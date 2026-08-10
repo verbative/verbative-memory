@@ -18,7 +18,7 @@ labels: bug
 **Environment**
 - Install method: Claude Code CLI / pip / other MCP client
 - Version (`verbative-memory --version`, or the VS Code extension version):
-- macOS version + chip (Apple silicon):
+- OS + version (macOS / Windows) and chip/CPU:
 - MCP client + version:
 
 **Logs / output**

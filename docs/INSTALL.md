@@ -8,7 +8,7 @@ The canonical, always-current guide lives at
 
 ## Requirements
 
-- **macOS on Apple silicon.** Windows and Linux are on the roadmap.
+- **macOS (Apple silicon) or Windows 10/11 (x64).** Linux is on the roadmap.
 - **Node.js ≥ 18** (for the `npx` launcher) or **Python ≥ 3.10** (for `pip`).
 - A **Verbative account**. Memory is part of the **Code Advanced** plan and starts with a
   **14-day free trial**; see [verbative.de/pricing](https://verbative.de/pricing).
@@ -69,9 +69,9 @@ connection.
 
 - **"Models ✓" but search returns nothing** — the local model runtime may not be on the path
   yet; re-run `verbative-memory setup` to fetch it, then restart the server.
-- **Install fails with "no matching distribution" (pip)** — the package ships as a sealed,
-  per-version macOS (Apple-silicon) wheel. Confirm you are on macOS Apple silicon with a
-  supported Python (3.10–3.14).
+- **Install fails with "no matching distribution" (pip)** — the package ships as sealed,
+  per-version platform wheels (macOS Apple silicon and Windows x64). Confirm you are on a
+  supported platform with a supported Python (3.10–3.14).
 - **Anything account- or billing-related** — email info@verbative.de.
 
 Full docs and current benchmarks: [verbative.de/docs/memory](https://verbative.de/docs/memory).

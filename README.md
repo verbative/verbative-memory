@@ -26,7 +26,7 @@ no memory cloud, no vendor database.
 
 ## Requirements
 
-- **macOS on Apple silicon.** (Windows and Linux are on the roadmap.)
+- **macOS (Apple silicon) or Windows 10/11 (x64).** (Linux is on the roadmap.)
 - A **Verbative account** — Memory is part of the **Code Advanced** plan and starts with a
   **14-day free trial**. See the [plans](https://verbative.de/pricing) and the
   [Terms](https://verbative.de/legal/terms).
