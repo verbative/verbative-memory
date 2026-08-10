@@ -3,19 +3,19 @@
   "name": "io.github.verbative/verbative-memory",
   "description": "On-device, self-organizing memory for AI coding agents — recalls the right facts into each prompt.",
   "repository": { "url": "https://github.com/verbative/verbative-memory", "source": "github" },
-  "version": "1.0.1",
+  "version": "1.1.0",
   "packages": [
     {
       "registryType": "npm",
       "identifier": "verbative-memory",
-      "version": "1.0.1",
+      "version": "1.1.0",
       "transport": { "type": "stdio" },
       "runtimeHint": "npx"
     },
     {
       "registryType": "pypi",
       "identifier": "verbative-memory",
-      "version": "1.0.1",
+      "version": "1.1.0",
       "transport": { "type": "stdio" }
     }
   ]
