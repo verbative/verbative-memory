@@ -50,6 +50,9 @@ Then point the client at the installed console script:
 - **Node 18+** (for the npx method) or **Python 3.10+** (for pip).
 - On first launch it downloads the on-device engine + models (~4 GB, one time).
   After that it runs **fully offline** — no network calls, nothing uploaded.
+  (The optional on-device reader model, used by the `ask` tool, is separate: it
+  downloads on first use, sized to the machine's RAM — up to ~19 GB. Every other
+  tool works without it.)
 - The memory engine needs a **Verbative account** (free 14-day trial) — sign in at
   https://verbative.de. Listing, pinning, and exporting existing memories keep
   working even if the trial lapses.

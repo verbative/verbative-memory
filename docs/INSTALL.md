@@ -12,7 +12,9 @@ The canonical, always-current guide lives at
 - **Node.js ≥ 18** (for the `npx` launcher) or **Python ≥ 3.10** (for `pip`).
 - A **Verbative account**. Memory is part of the **Code Advanced** plan and starts with a
   **14-day free trial**; see [verbative.de/pricing](https://verbative.de/pricing).
-- ~4 GB of disk for the on-device models (downloaded once).
+- ~4 GB of disk for the on-device models (downloaded once). An optional **on-device reader
+  model** (it powers `ask`) — sized to your machine's RAM, from a few GB up to ~19 GB on
+  high-RAM machines — downloads on first use, or up front via `verbative-memory setup`.
 
 ## Option A — Claude Code CLI (recommended)
 
@@ -55,10 +57,14 @@ clients can call the tools manually (`remember`, `recall`, `search`, and the res
 The first launch downloads the engine and models (one time, ~4 GB): the sealed engine core and
 the local model runtime from the official
 [release repository](https://github.com/verbative/verbative-dist), plus the on-device
-embedding, reranker, and extractor models from their official Hugging Face repos. Every
-download is verified against a pinned SHA-256 before it is used. After that, recall runs with
-zero network calls. If you are offline on first run, the download is deferred until you have a
-connection.
+embedding, reranker, and extractor models from their official Hugging Face repos. The engine
+core, runtime, and these three models are each verified against a pinned SHA-256 before they
+are used. After that, recall runs with zero network calls. If you are offline on first run,
+the download is deferred until you have a connection.
+
+The optional **on-device reader model** (used by `ask`) is separate: it downloads on first
+use (or with `verbative-memory setup`), and its size depends on your RAM — the largest tier
+is ~19 GB, so fetch it on a connection you trust to stay up.
 
 ## Verifying it works
 
@@ -69,6 +75,9 @@ connection.
 
 - **"Models ✓" but search returns nothing** — the local model runtime may not be on the path
   yet; re-run `verbative-memory setup` to fetch it, then restart the server.
+- **"no reader model" after a long download** — the reader download does not resume yet, so an
+  interrupted transfer starts over. Re-run `verbative-memory setup` on a stable connection; the
+  reader is optional — only `ask` needs it, everything else works without it.
 - **Install fails with "no matching distribution" (pip)** — the package ships as sealed,
   per-version platform wheels (macOS Apple silicon and Windows x64). Confirm you are on a
   supported platform with a supported Python (3.10–3.14).
